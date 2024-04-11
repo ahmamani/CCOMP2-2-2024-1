@@ -11,21 +11,16 @@ using namespace std;
     cin>>numero;
 
     for(int i=1;i<=numero;i++){
-        if( i == 1){
-            //cout<<t1<<" , ";
+        if( i == 1){            
             continue; 
         }
-        if(i == 2){
-           //cout<<t2<<" , ";
+        if(i == 2){         
             continue; 
         }
-
-        t3=t1+t2;
-        t1=t2;
-        t2=t3;
-
-        //cout<<t3<<" , ";
+        t3 = t1 + t2;
+        t1 = t2;
+        t2 = t3;
     }
-    cout<<t3;
+    cout << "El " << numero << " fib es: " << t3;
     return 0;
  }

@@ -4,20 +4,21 @@ using namespace std;
 int main(){
 
     long long numero;
-    long  contador{0};
+    bool noEsPrimo = false;
 
     cout<<"Introduce el numero: ";cin>>numero;
 
-    for(int i=1;i<=numero;i++){
+    for(int i = 2; i <= numero/2; i++){
         if(numero%i==0){
-            contador++;
+            noEsPrimo = true;
+            break;
         }
     }
 
-    if(contador==2){//Divisible entre solo 2 numeros.
-        cout<<numero<<" ES PRIMO"<<endl;
-    }else{//Divisible entre 1 o mas de dos numero.
-        cout<<numero<<" NO ES PRIMO"<<endl;
+    if( !noEsPrimo ) {
+        cout << numero << " ES PRIMO" << endl;
+    }else{
+        cout << numero << " NO ES PRIMO" << endl;
     }
 
     return 0;
