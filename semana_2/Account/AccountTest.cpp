@@ -20,9 +20,8 @@ int main() {
     cout << "El primer nombre de la cuenta es: " << account2.getName();
 
     cout << "\nIngresa un nombre por favor: ";
-    string nombre;
-    getline(cin, nombre);
-    account2.setName(nombre);
+    getline(cin, theName);
+    account2.setName(theName);
 
     cout << "El nombre de account2 es: " <<
             account2.getName() << endl;
